@@ -24,6 +24,7 @@ namespace Dijkstra
 
                 edges.Add(new Edge(edgeStart, edgeEnd, edgeWeight));
             }
+
             sr.Close();
 
             return new GraphData(rank, edges);
