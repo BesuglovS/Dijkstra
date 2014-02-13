@@ -27,9 +27,13 @@ namespace Dijkstra
             graphData = LoadData.Run(Filename.Text);
             
             pathStart.Items.Clear();
-            pathStart.Items.AddRange(Enumerable.Range(0, graphData.Rank).Select(i => i.ToString()).ToArray());
+            pathStart.Items
+                .AddRange(Enumerable.Range(0, graphData.Rank)
+                .Select(i => i.ToString()).ToArray());
             pathFinish.Items.Clear();
-            pathFinish.Items.AddRange(Enumerable.Range(0, graphData.Rank).Select(i => i.ToString()).ToArray());            
+            pathFinish.Items
+                .AddRange(Enumerable.Range(0, graphData.Rank)
+                .Select(i => i.ToString()).ToArray());            
         }
 
         private void RunSearch_Click(object sender, EventArgs e)
