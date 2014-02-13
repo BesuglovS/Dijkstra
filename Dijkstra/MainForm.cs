@@ -42,7 +42,8 @@ namespace Dijkstra
 
             pathLength.Text = solverPath.PathLength.ToString();
             path.Text = solverPath.Path
-                .Aggregate<int, string>("", (x, y) => x + " => " + y.ToString());
+                .Select(p => p.ToString())
+                .Aggregate((x, y) => x + " => " + y);
         }
     }
 }
